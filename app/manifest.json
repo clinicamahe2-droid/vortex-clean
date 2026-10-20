@@ -1,0 +1,9 @@
+{
+  "name": "Vortex App",
+  "short_name": "Vortex",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f8f9",
+  "theme_color": "#0f2236",
+  "icons": [{"src": "img/icone.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" font-family="Arial, sans-serif">
+  <rect width="360" height="480" fill="#f4f6f8"/>
+  <rect x="24" y="24" width="312" height="432" rx="18" fill="#ffffff"/>
+  <circle cx="180" cy="86" r="28" fill="#e2f3ec"/>
+  <path d="M166 87l10 10 20-22" stroke="#0f7a5a" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="180" y="146" text-anchor="middle" font-size="18" font-weight="700" fill="#0f2236">Pix enviado</text>
+  <text x="180" y="186" text-anchor="middle" font-size="30" font-weight="700" fill="#0f2236">R$ 420,00</text>
+  <text x="48" y="240" font-size="13" fill="#53657a">Para</text>
+  <text x="312" y="240" text-anchor="end" font-size="13" font-weight="700" fill="#0f2236">Vortex Clean</text>
+  <text x="48" y="272" font-size="13" fill="#53657a">Data</text>
+  <text x="312" y="272" text-anchor="end" font-size="13" font-weight="700" fill="#0f2236">21/10, 10:52</text>
+  <text x="48" y="304" font-size="13" fill="#53657a">Identificador</text>
+  <text x="312" y="304" text-anchor="end" font-size="13" font-weight="700" fill="#0f2236">E0000…EXEMPLO</text>
+  <text x="180" y="420" text-anchor="middle" font-size="12" fill="#53657a">Comprovante de exemplo</text>
+</svg>
