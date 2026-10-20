@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Vortex Clean">
+<meta property="og:description" content="Higienização de sofás, colchões e bancos de carro em Criciúma e região, com fotos de antes e depois, recibo e garantia no celular.">
+<meta property="og:image" content="https://clinicamahe2-droid.github.io/vortex-clean/img/sala.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ffffff">
+<title>Vortex Clean</title>
+<meta name="description" content="Higienização de sofás, colchões e bancos de carro em Criciúma e região, com fotos de antes e depois, recibo e garantia no celular.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: casa clara e arejada. Fundo branco, campos em azul-espuma bem claro, fotos grandes com cantos suaves, texto alinhado à esquerda. Um visual só, escolhido para a marca. */
+:root{
+  --white:#ffffff;
+  --mist:#f3f8f9;
+  --foam-soft:#e4f4f6;
+  --foam:#7fd0d9;
+  --ink:#0f2236;
+  --soft:#4a5d70;
+  --blue:#1c5fc4;
+  --blue-dark:#164c9d;
+  --display:"Unbounded","Arial Black",system-ui,sans-serif;
+  --text:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --s-small:.9375rem;
+  --s-body:clamp(1.0625rem,1rem + .2vw,1.1875rem);
+  --s-lead:clamp(1.1875rem,1.05rem + .5vw,1.4375rem);
+  --s-head:clamp(1.9rem,1.2rem + 2.6vw,3.25rem);
+  --s-display:clamp(2.3rem,1rem + 3.4vw,3.9rem);
+  --m:clamp(18px,4vw,64px);
+  --r:26px;
+  --gap:clamp(96px,11vw,168px);
+  --ease:cubic-bezier(.16,1,.3,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;overflow-x:clip;background:var(--white);color:var(--ink);font-family:var(--text);font-size:var(--s-body);line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--white)}
+h1,h2,h3,p,figure,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+h1,h2{font-family:var(--display);font-weight:600;letter-spacing:-.025em;line-height:1.04;text-wrap:balance}
+h3{font-weight:700;font-size:1.25rem;line-height:1.25}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1320px;margin:0 auto;padding-left:max(var(--m),env(safe-area-inset-left,0px));padding-right:max(var(--m),env(safe-area-inset-right,0px))}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:16px 28px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;transition:background .25s ease,transform .3s var(--ease)}
+.btn:active{transform:scale(.97)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-dark)}
+.btn-line{background:var(--foam-soft);color:var(--ink)}
+.btn-line:hover{background:#d3eef1}
+.btn-white{background:#fff;color:var(--blue)}
+.btn-white:hover{background:var(--foam-soft)}
+.btn svg{width:20px;height:20px}
+.lead{font-size:var(--s-lead);line-height:1.45;color:var(--soft);max-width:44ch}
+.small{font-size:var(--s-small);color:var(--soft)}
+
+/* Barra */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.96)}
+.bar .wrap{display:flex;align-items:center;gap:32px;height:78px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:600;font-size:1.3rem;letter-spacing:-.02em}
+.logo svg{width:34px;height:34px}
+.bar nav{display:flex;gap:28px;margin-left:auto;font-weight:600;color:var(--soft)}
+.bar nav a{text-decoration:none;transition:color .2s}
+.bar nav a:hover{color:var(--blue)}
+.bar .btn{padding:12px 22px}
+@media (max-width:900px){.bar nav{display:none}.bar .btn{margin-left:auto}}
+
+/* Herói */
+.hero{padding-block:40px var(--gap)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(32px,5vw,80px);align-items:center}
+.hero-copy{display:grid;gap:26px;min-width:0}
+.hero h1{font-size:var(--s-display)}
+.hero h1 .ln{display:block}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.promises{display:grid;gap:12px;margin-top:6px}
+.promises li{display:flex;gap:12px;align-items:center;font-weight:600}
+.promises svg{width:24px;height:24px;flex:none;color:var(--blue)}
+.hero-pic{position:relative;min-width:0;padding-bottom:40px}
+.hero-pic .photo{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3.4}
+.hero-pic .photo img{width:100%;height:100%;object-fit:cover;object-position:40% 60%}
+.phone{position:absolute;left:-44px;bottom:0;width:clamp(170px,17vw,230px);aspect-ratio:600/1240;border-radius:34px;background:#0e1620;padding:8px;box-shadow:0 30px 60px -24px rgba(15,34,54,.45)}
+.phone video,.phone img{width:100%;height:100%;object-fit:cover;border-radius:27px;background:var(--mist)}
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero h1{font-size:clamp(2.1rem,9.4vw,3.2rem)}
+  .phone{left:auto;right:16px;width:34vw;max-width:170px;bottom:0}
+  .hero-pic .photo{aspect-ratio:4/3}
+}
+
+/* Antes e depois */
+.compare{padding-bottom:var(--gap)}
+.compare .head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:end;margin-bottom:40px}
+.compare h2{font-size:var(--s-head)}
+.ba{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:760/430;max-width:100%;--pos:50%;user-select:none;background:var(--mist);touch-action:pan-y}
+.ba img,.ba svg.dirt{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:0% 100%}
+.ba .before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--pos);width:4px;margin-left:-2px;background:#fff;pointer-events:none}
+.ba .handle i{position:absolute;top:50%;left:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--ink)}
+.ba .handle svg{width:26px;height:26px}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:ew-resize}
+.ba .tag{position:absolute;top:18px;font-weight:700;font-size:.95rem;background:rgba(255,255,255,.92);color:var(--ink);padding:8px 16px;border-radius:999px;pointer-events:none}
+.ba .tag.l{left:18px}.ba .tag.r{right:18px}
+.compare .note{margin-top:14px}
+@media (max-width:760px){.compare .head{grid-template-columns:1fr;gap:16px}.ba{aspect-ratio:4/3.2}}
+
+/* Serviços */
+.services{padding-bottom:var(--gap)}
+.services h2{font-size:var(--s-head);margin-bottom:40px;max-width:16ch}
+.svc-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px}
+.svc{display:grid;gap:16px;text-decoration:none;color:inherit}
+.svc .pic{border-radius:var(--r);overflow:hidden}
+.svc .pic img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.svc:hover .pic img{transform:scale(1.04)}
+.svc.big .pic{aspect-ratio:4/3.1}
+.svc-side{display:grid;gap:24px}
+.svc.small{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:22px}
+.svc.small .pic{aspect-ratio:1}
+.svc .txt{display:grid;gap:6px}
+.svc .txt p{color:var(--soft)}
+.svc .from{font-weight:700;color:var(--blue);margin-top:4px}
+.svc img.quarto{filter:brightness(1.14) saturate(1.05)}
+@media (max-width:860px){.svc-grid{grid-template-columns:1fr}.svc.small{grid-template-columns:120px minmax(0,1fr)}}
+
+/* Como funciona */
+.how{background:var(--foam-soft);padding-block:var(--gap)}
+.how .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
+.how h2{font-size:var(--s-head);position:sticky;top:120px}
+.how ol{display:grid;gap:12px}
+.how li{background:#fff;border-radius:var(--r);padding:30px 32px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;align-items:start}
+.how li h3{font-size:1.375rem}
+.how li p{grid-column:1;color:var(--soft);max-width:48ch}
+.how li .when{grid-row:1;grid-column:2;font-weight:600;color:var(--blue);font-size:var(--s-small);white-space:nowrap;padding-top:4px}
+@media (max-width:860px){.how .wrap{grid-template-columns:1fr}.how h2{position:static}.how li{grid-template-columns:1fr}.how li .when{grid-row:auto;grid-column:1;padding-top:0}}
+
+/* Relatório */
+.report{padding-block:var(--gap)}
+.report .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:center}
+.report .stage{background:var(--mist);border-radius:var(--r);aspect-ratio:1/1.02;display:grid;place-items:center;position:relative;overflow:hidden}
+.report .stage .phone{position:relative;left:auto;bottom:auto;width:min(300px,62%)}
+.report h2{font-size:var(--s-head)}
+.report .copy{display:grid;gap:26px}
+.report dl{display:grid;gap:22px;margin:8px 0 0}
+.report dt{font-weight:700;font-size:1.1875rem}
+.report dd{margin:4px 0 0;color:var(--soft);max-width:44ch}
+@media (max-width:860px){.report .wrap{grid-template-columns:1fr}.report .stage{order:2}}
+
+/* Preços e simulador */
+.prices{background:var(--mist);padding-block:var(--gap)}
+.prices .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:start}
+.prices h2{font-size:var(--s-head)}
+.prices .left{display:grid;gap:22px}
+.sim{display:grid;gap:4px;margin-top:12px}
+.sim-row{display:flex;align-items:center;justify-content:space-between;gap:16px;background:#fff;border-radius:18px;padding:14px 16px 14px 22px}
+.sim-row b{font-weight:700;display:block}
+.sim-row span.unit{color:var(--soft);font-size:var(--s-small)}
+.qty{display:flex;align-items:center;gap:4px}
+.qty button{width:42px;height:42px;border-radius:50%;border:0;background:var(--foam-soft);color:var(--ink);font:inherit;font-size:1.3rem;font-weight:700;cursor:pointer;transition:background .2s,transform .2s var(--ease)}
+.qty button:hover{background:var(--foam)}
+.qty button:active{transform:scale(.92)}
+.qty output{min-width:28px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.total{position:sticky;top:110px;background:var(--blue);color:#fff;border-radius:var(--r);padding:clamp(28px,3vw,40px);display:grid;gap:18px}
+.total h3{font-size:1.125rem;font-weight:600;color:#dbe7fb}
+.total .num{font-family:var(--display);font-weight:600;font-size:clamp(2.8rem,1.6rem + 3vw,4.4rem);letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.total ul{display:grid;gap:6px;color:#dbe7fb;min-height:26px}
+.total ul li{display:flex;justify-content:space-between;gap:12px}
+.total label{display:flex;gap:12px;align-items:center;cursor:pointer;font-weight:600}
+.total input{width:22px;height:22px;accent-color:#fff}
+.total p{color:#dbe7fb;font-size:var(--s-small)}
+.total .btn[aria-disabled="true"]{opacity:.5;pointer-events:none}
+@media (max-width:860px){.prices .wrap{grid-template-columns:1fr}.total{position:static}}
+
+/* Plano */
+.plan{padding-block:var(--gap)}
+.plan .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:center}
+.plan .pic{border-radius:var(--r);overflow:hidden;aspect-ratio:16/10}
+.plan .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.plan .copy{display:grid;gap:22px}
+.plan h2{font-size:var(--s-head)}
+.plan .price{font-family:var(--display);font-weight:600;font-size:clamp(2.4rem,1.6rem + 2vw,3.4rem);letter-spacing:-.03em;line-height:1}
+.plan .price small{font-family:var(--text);font-size:1.0625rem;font-weight:600;letter-spacing:0;color:var(--soft);margin-left:6px}
+@media (max-width:860px){.plan .wrap{grid-template-columns:1fr}}
+
+/* Dúvidas */
+.faq{padding-bottom:var(--gap)}
+.faq h2{font-size:var(--s-head);margin-bottom:48px}
+.faq dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px clamp(32px,5vw,80px);margin:0}
+.faq dt{font-weight:700;font-size:1.25rem;line-height:1.3}
+.faq dd{margin:8px 0 0;color:var(--soft);max-width:52ch}
+@media (max-width:760px){.faq dl{grid-template-columns:1fr;gap:28px}}
+
+/* Fechamento */
+.cta{padding-bottom:40px}
+.cta .box{background:var(--blue);color:#fff;border-radius:calc(var(--r) + 8px);padding:clamp(40px,6vw,88px);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:end}
+.cta h2{font-size:clamp(2.2rem,1.2rem + 3.4vw,4.2rem)}
+.cta p{color:#dbe7fb;font-size:var(--s-lead);max-width:36ch;margin-top:18px}
+.cta .side{display:grid;gap:16px;justify-items:start}
+.cta .tel{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,1rem + 1.4vw,2.2rem);letter-spacing:-.02em;user-select:all}
+.cta .cities{color:#dbe7fb;font-size:var(--s-small);max-width:40ch}
+@media (max-width:860px){.cta .box{grid-template-columns:1fr}}
+
+footer{padding-block:40px 56px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start}
+footer p{color:var(--soft);font-size:var(--s-small);max-width:60ch}
+footer .lang{font-weight:600;font-size:var(--s-small)}
+
+.wa{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:45;width:60px;height:60px;border-radius:50%;background:#1fa855;display:grid;place-items:center;box-shadow:0 12px 26px -10px rgba(15,34,54,.5);transition:transform .3s var(--ease)}
+.wa:hover{transform:scale(1.06)}
+.wa svg{width:30px;height:30px;color:#fff}
+
+/* Movimento: GSAP define os estados iniciais; sem script, tudo aparece pronto */
+.progress{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--blue);z-index:70}
+.bar{transition:transform .45s var(--ease),box-shadow .3s}
+.bar.hide{transform:translateY(-110%)}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
+.split .w > span{display:inline-block;will-change:transform}
+.reveal{overflow:hidden}
+.phone{will-change:transform}
+
+/* Faixa que corre */
+.marquee{overflow:hidden;padding-block:26px;background:var(--foam-soft);margin-bottom:var(--gap)}
+.marquee .track{display:flex;gap:48px;width:max-content;font-family:var(--display);font-weight:500;font-size:clamp(1.25rem,.9rem + 1.4vw,2.1rem);letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+.marquee .track span{display:flex;align-items:center;gap:48px}
+.marquee .track svg{width:.9em;height:.9em;flex:none}
+
+/* Passos com linha de progresso */
+.how .steps{position:relative;padding-left:34px}
+.how .rail{position:absolute;left:8px;top:20px;bottom:20px;width:3px;background:#cfe7eb;border-radius:3px}
+.how .rail i{position:absolute;inset:0;background:var(--blue);border-radius:3px;transform-origin:50% 0;transform:scaleY(0)}
+.how li{position:relative}
+.how li::before{content:"";position:absolute;left:-33px;top:36px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--blue)}
+
+/* Dúvidas em acordeão */
+.faq .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(28px,5vw,80px);align-items:start}
+.faq h2{margin-bottom:0;position:sticky;top:120px}
+.acc{display:grid;gap:10px}
+.acc .item{background:var(--mist);border-radius:22px;transition:background .3s}
+.acc .item.open{background:var(--foam-soft)}
+.acc button{all:unset;box-sizing:border-box;width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 26px;cursor:pointer;font-weight:700;font-size:1.1875rem;line-height:1.3;border-radius:22px}
+.acc button:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.acc button i{width:36px;height:36px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none;transition:transform .4s var(--ease),background .3s}
+.acc button i svg{width:18px;height:18px}
+.acc .item.open button i{transform:rotate(45deg);background:var(--blue);color:#fff}
+.acc .ans{overflow:hidden;height:0}
+.acc .ans p{padding:0 26px 24px;color:var(--soft);max-width:60ch}
+@media (max-width:860px){.faq .wrap{grid-template-columns:1fr}.faq h2{position:static}}
+
+/* Fechamento com redemoinho */
+.cta .box{position:relative;overflow:hidden}
+.cta .box > *{position:relative;z-index:1}
+.cta canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.55;pointer-events:none}
+
+/* Cartões com inclinação */
+.svc .pic{transform-style:preserve-3d;transition:transform .5s var(--ease)}
+.magnet{will-change:transform}
+
+/* Celular: ajustes finos */
+@media (max-width:600px){
+  .ctas .btn{width:100%}
+  .ctas{flex-direction:column;align-items:stretch}
+  .hero{padding-top:20px}
+  .ba .handle i{width:46px;height:46px;margin:-23px 0 0 -23px}
+  .ba .tag{top:12px;font-size:.85rem;padding:6px 12px}
+  .ba .tag.l{left:12px}.ba .tag.r{right:12px}
+  .how li{padding:24px 22px}
+  .sim-row{padding:12px 12px 12px 16px}
+  .qty button{width:40px;height:40px}
+  .total{padding:26px}
+  .cta .box{padding:36px 24px;border-radius:26px}
+  .cta .btn{width:100%}
+  .wa{width:54px;height:54px}
+  .acc button{padding:18px 20px;font-size:1.0625rem}
+  .acc .ans p{padding:0 20px 20px}
+}
+@media (prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></symbol>
+    <symbol id="i-lr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></symbol>
+  </defs>
+</svg>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Vortex Clean, início">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 21a12 12 0 0 0 20.5 6" stroke="#7fd0d9" stroke-width="2.4" stroke-linecap="round"/><path d="M31.5 19A12 12 0 0 0 13 9" stroke="#7fd0d9" stroke-width="2.4" stroke-linecap="round"/></svg>
+      Vortex
+    </a>
+    <nav aria-label="Seções">
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#precos">Preços</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-blue" href="#precos">Agendar</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio" aria-labelledby="t-hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1 id="t-hero"><span class="ln">Casa limpa, </span><span class="ln">família tranquila.</span></h1>
+      <p class="lead">A Vortex higieniza sofás, colchões e bancos de carro na sua casa, em Criciúma e região. No fim, você recebe no celular as fotos de antes e depois, o recibo e a garantia.</p>
+      <div class="ctas">
+        <a class="btn btn-blue" href="https://wa.me/5548998399955?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento.%20Vou%20mandar%20a%20foto." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Pedir orçamento por foto</a>
+        <a class="btn btn-line" href="#precos">Ver preços</a>
+      </div>
+      <ul class="promises">
+        <li><svg><use href="#i-check"/></svg>Pronto para usar em 4 a 8 horas</li>
+        <li><svg><use href="#i-check"/></svg>Produtos seguros para crianças e pets</li>
+        <li><svg><use href="#i-check"/></svg>Garantia por escrito em todo serviço</li>
+      </ul>
+    </div>
+    <div class="hero-pic">
+      <div class="photo"><img src="img/sala.jpg" alt="Sala clara com sofá creme, janela grande e piso de madeira" width="1024" height="683"></div>
+      <div class="phone" aria-label="App Vortex mostrando o relatório de um serviço">
+        <video autoplay muted loop playsinline preload="auto" poster="img/relatorio-poster.jpg" aria-hidden="true"><source src="img/relatorio.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track"><span>Sofás<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Colchões<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Poltronas<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Bancos de carro<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Cabeceiras<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Cadeiras<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Tapetes<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Sofás<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Colchões<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Poltronas<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Bancos de carro<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Cabeceiras<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Cadeiras<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Tapetes<svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></div>
+
+<section class="compare" aria-labelledby="t-compare">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="t-compare" data-in>Arraste e veja a diferença</h2>
+      <p class="lead" data-in>A sujeira do dia a dia vai escurecendo o tecido sem a gente perceber. A higienização devolve a cor e tira ácaros, odores e manchas.</p>
+    </div>
+    <div class="ba" data-in>
+      <img src="img/sofa.jpg" alt="Sofá creme limpo" width="760" height="430">
+      <div class="before">
+        <img src="img/sofa.jpg" alt="" width="760" height="430">
+        <svg class="dirt" viewBox="0 0 760 430" preserveAspectRatio="xMinYMax slice" aria-hidden="true">
+          <defs>
+            <filter id="nz" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="4" seed="4"/><feColorMatrix type="matrix" values="0 0 0 0 0.42  0 0 0 0 0.33  0 0 0 0 0.22  0 0 0 -2.4 1.75"/><feGaussianBlur stdDeviation="2"/></filter>
+            <mask id="ms"><rect width="760" height="430" fill="black"/><polygon fill="white" points="0,175 70,160 240,152 365,148 475,150 530,185 530,250 330,265 300,330 290,380 270,430 0,430"/><polygon fill="white" points="540,195 660,155 760,160 760,350 690,360 570,320 545,260"/><polygon fill="black" points="335,262 562,260 600,300 560,412 380,422 338,330"/></mask>
+          </defs>
+          <g mask="url(#ms)"><rect width="760" height="430" fill="#8a7a5c" opacity="0.38" style="mix-blend-mode:multiply"/><rect width="760" height="430" filter="url(#nz)" style="mix-blend-mode:multiply"/></g>
+        </svg>
+      </div>
+      <div class="handle"><i><svg><use href="#i-lr"/></svg></i></div>
+      <span class="tag l">Antes</span><span class="tag r">Depois</span>
+      <input type="range" id="ba-range" min="0" max="100" value="50" aria-label="Arraste para comparar antes e depois">
+    </div>
+    <p class="small note">Imagem ilustrativa. No site no ar, aqui entram fotos reais dos atendimentos da Vortex.</p>
+  </div>
+</section>
+
+<section class="services" id="servicos" aria-labelledby="t-serv">
+  <div class="wrap">
+    <h2 id="t-serv" data-in>Tudo em que sua família senta e deita</h2>
+    <div class="svc-grid">
+      <a class="svc big" href="#precos" data-in>
+        <div class="pic"><img src="img/sala-sofa.jpg" alt="Sofá de canto creme em sala clara" width="800" height="800" loading="lazy"></div>
+        <div class="txt"><h3>Sofás e poltronas</h3><p>Fixos, retráteis e de canto, em tecido, suede ou couro.</p><span class="from">A partir de R$ 180</span></div>
+      </a>
+      <div class="svc-side">
+        <a class="svc small" href="#precos" data-in>
+          <div class="pic"><img class="quarto" src="img/quarto.jpg" alt="Quarto claro com cama de casal e lençóis brancos" width="900" height="900" loading="lazy"></div>
+          <div class="txt"><h3>Colchões</h3><p>De solteiro a king, dos dois lados. Ideal para quem tem rinite.</p><span class="from">A partir de R$ 140</span></div>
+        </a>
+        <a class="svc small" href="#precos" data-in>
+          <div class="pic"><img src="img/carro.jpg" alt="Interior de carro com bancos de couro" width="900" height="900" loading="lazy"></div>
+          <div class="txt"><h3>Bancos de carro</h3><p>Bancos, teto e carpete, na sua garagem. Também para frotas.</p><span class="from">A partir de R$ 160</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="como-funciona" aria-labelledby="t-how">
+  <div class="wrap">
+    <h2 id="t-how">Simples do começo ao fim</h2>
+    <div class="steps"><span class="rail" aria-hidden="true"><i></i></span>
+    <ol>
+      <li><h3>Você manda uma foto</h3><span class="when">Pelo WhatsApp</span><p>Mostre o sofá, o colchão ou o banco e diga o bairro. Não precisa medir nada.</p></li>
+      <li><h3>Recebe o valor fechado</h3><span class="when">No mesmo dia</span><p>O preço que a gente passa é o preço que você paga. Sem taxa surpresa na hora.</p></li>
+      <li><h3>A equipe vai até você</h3><span class="when">1 a 2 horas</span><p>Uniformizada, com proteção no chão e nos pés dos móveis. Você não tira nada do lugar.</p></li>
+      <li><h3>O relatório chega no celular</h3><span class="when">Na hora</span><p>Fotos de antes e depois, recibo e garantia, tudo guardado no seu histórico.</p></li>
+    </ol>
+    </div>
+  </div>
+</section>
+
+<section class="report" aria-labelledby="t-rel">
+  <div class="wrap">
+    <div class="stage" data-in>
+      <div class="phone"><video autoplay muted loop playsinline preload="none" poster="img/relatorio-poster.jpg" aria-hidden="true"><source src="img/relatorio.mp4" type="video/mp4"></video></div>
+    </div>
+    <div class="copy">
+      <h2 id="t-rel" data-in>Você vê o resultado, não só ouve falar</h2>
+      <p class="lead" data-in>Cada serviço termina com um relatório no seu celular. É a nossa forma de mostrar o trabalho com transparência.</p>
+      <dl data-in>
+        <div><dt>Fotos do mesmo ângulo</dt><dd>Tiradas pela equipe antes e depois de cada item, com horário.</dd></div>
+        <div><dt>Recibo e garantia</dt><dd>Valor pago, forma de pagamento e a data até quando a garantia vale.</dd></div>
+        <div><dt>Lembrete da próxima limpeza</dt><dd>A gente avisa quando for hora de higienizar de novo.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="prices" id="precos" aria-labelledby="t-precos">
+  <div class="wrap">
+    <div class="left">
+      <h2 id="t-precos" data-in>Monte seu orçamento</h2>
+      <p class="lead" data-in>Escolha os itens e veja uma estimativa agora. O valor final é confirmado pela foto, antes de marcar a visita.</p>
+      <div class="sim" id="sim" data-in></div>
+      <p class="small">Deslocamento incluso em Criciúma, Içara, Forquilhinha e Cocal do Sul.</p>
+    </div>
+    <aside class="total" aria-live="polite">
+      <h3>Sua estimativa</h3>
+      <div class="num" id="total">R$ 0</div>
+      <ul id="lines"></ul>
+      <label for="imp"><input type="checkbox" id="imp">Impermeabilizar (mais 40%)</label>
+      <a class="btn btn-white" id="send" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enviar pelo WhatsApp</a>
+      <p>Valores de referência para Criciúma e região.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="plan" aria-labelledby="t-plano">
+  <div class="wrap">
+    <div class="pic" data-in><img class="quarto" src="img/quarto.jpg" alt="Quarto claro e arejado com cama arrumada" width="900" height="900" loading="lazy" style="filter:brightness(1.14)"></div>
+    <div class="copy">
+      <h2 id="t-plano" data-in>Plano Vortex</h2>
+      <p class="lead" data-in>Duas higienizações por ano do sofá principal e de um colchão de casal, com prioridade na agenda e 10% de desconto em qualquer item a mais.</p>
+      <div class="price" data-in>R$ 59<small>por mês</small></div>
+      <div data-in><a class="btn btn-blue" href="https://wa.me/5548998399955?text=Quero%20saber%20do%20Plano%20Vortex." target="_blank" rel="noopener">Quero o plano</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="duvidas" aria-labelledby="t-faq">
+  <div class="wrap">
+    <h2 id="t-faq">Dúvidas frequentes</h2>
+    <div class="acc">
+      <div class="item open"><button type="button" aria-expanded="true" aria-controls="a0" id="q0"><span>Quanto tempo leva para secar?</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></button><div class="ans" id="a0" role="region" aria-labelledby="q0" style="height:auto"><p>De 4 a 8 horas, conforme o tecido e a ventilação. Deixe uma janela aberta e evite sentar até estar seco ao toque.</p></div></div>
+      <div class="item"><button type="button" aria-expanded="false" aria-controls="a1" id="q1"><span>Preciso tirar o sofá de casa?</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></button><div class="ans" id="a1" role="region" aria-labelledby="q1"><p>Não. Todo o serviço é feito no lugar, com proteção no chão. Leva de uma a duas horas por sofá.</p></div></div>
+      <div class="item"><button type="button" aria-expanded="false" aria-controls="a2" id="q2"><span>É seguro para crianças e pets?</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></button><div class="ans" id="a2" role="region" aria-labelledby="q2"><p>Sim. Os produtos são neutros e biodegradáveis. Depois de seco, pode usar normalmente.</p></div></div>
+      <div class="item"><button type="button" aria-expanded="false" aria-controls="a3" id="q3"><span>E se a mancha voltar?</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></button><div class="ans" id="a3" role="region" aria-labelledby="q3"><p>Abra o relatório do serviço e chame pela garantia. A equipe avalia e volta sem custo quando for o mesmo ponto.</p></div></div>
+      <div class="item"><button type="button" aria-expanded="false" aria-controls="a4" id="q4"><span>Como recebo as fotos e o recibo?</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></button><div class="ans" id="a4" role="region" aria-labelledby="q4"><p>Pelo WhatsApp ou pelo app Vortex, assim que a equipe termina.</p></div></div>
+      <div class="item"><button type="button" aria-expanded="false" aria-controls="a5" id="q5"><span>Vocês atendem empresas?</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></button><div class="ans" id="a5" role="region" aria-labelledby="q5"><p>Sim. Airbnb, clínicas, escritórios e revendas de carro têm contrato mensal com nota fiscal e relatório.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" aria-labelledby="t-cta">
+  <div class="wrap">
+    <div class="box">
+      <canvas aria-hidden="true"></canvas>
+      <div>
+        <h2 id="t-cta">Mande a foto do seu sofá</h2>
+        <p>A gente responde com o valor fechado no mesmo dia, de segunda a sábado.</p>
+      </div>
+      <div class="side">
+        <a class="btn btn-white" href="https://wa.me/5548998399955?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
+        <span class="tel">(48) 99839-9955</span>
+        <span class="cities">Criciúma, Içara, Forquilhinha, Cocal do Sul, Morro da Fumaça, Nova Veneza, Siderópolis e Urussanga.</span>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#inicio"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1c5fc4"/><path d="M11 12.5l9 16 9-16" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 21a12 12 0 0 0 20.5 6" stroke="#7fd0d9" stroke-width="2.4" stroke-linecap="round"/><path d="M31.5 19A12 12 0 0 0 13 9" stroke="#7fd0d9" stroke-width="2.4" stroke-linecap="round"/></svg>Vortex</a>
+    <p>Vortex Clean, higienização de estofados em Criciúma e região, SC. <a href="https://www.instagram.com/vortexclean.estofados/" target="_blank" rel="noopener">@vortexclean.estofados</a></p>
+    <span class="lang">Versión en español</span>
+    <p>Fotos: salas por Foto Miki Digital (domínio público, Flickr); quarto pelo Governo das Ilhas Virgens dos EUA (domínio público, Wikimedia Commons); interior de carro por Shixart1985 (CC BY 2.0, Wikimedia Commons).</p>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5548998399955?text=Ol%C3%A1%2C%20vim%20pelo%20site." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var reduce=false;
+
+  // Antes e depois
+  var ba=document.querySelector('.ba'),range=document.getElementById('ba-range');
+  var setPos=function(v){ba.style.setProperty('--pos',v+'%')};
+  range.addEventListener('input',function(){setPos(range.value)});
+  // Uma dica de movimento quando o comparador aparece, uma vez
+  if(!reduce&&'IntersectionObserver' in window){
+    var hinted=false,ho=new IntersectionObserver(function(es){if(es[0].isIntersecting&&!hinted){hinted=true;var t0=performance.now();(function step(t){var k=Math.min(1,(t-t0)/1600),v=50+Math.sin(k*Math.PI*2)*18*(1-k);setPos(v.toFixed(1));range.value=v;if(k<1)requestAnimationFrame(step)})(t0);ho.disconnect()}},{threshold:.6});ho.observe(ba);
+  }
+
+  // Simulador
+  var items=[['s3','Sofá 3 lugares',240,1],['s2','Sofá 2 lugares',180,0],['sr','Sofá retrátil ou de canto',320,0],['po','Poltrona',90,0],['cc','Colchão casal',190,0],['cs','Colchão solteiro',140,0],['bc','Bancos de carro',220,0]];
+  var q={},sim=document.getElementById('sim');
+  sim.innerHTML=items.map(function(it){q[it[0]]=it[3];return '<div class="sim-row"><span><b>'+it[1]+'</b><span class="unit">R$ '+it[2]+'</span></span><span class="qty"><button type="button" data-k="'+it[0]+'" data-d="-1" aria-label="Menos '+it[1]+'">−</button><output id="q-'+it[0]+'">'+it[3]+'</output><button type="button" data-k="'+it[0]+'" data-d="1" aria-label="Mais '+it[1]+'">+</button></span></div>'}).join('');
+  var imp=document.getElementById('imp'),total=document.getElementById('total'),lines=document.getElementById('lines'),send=document.getElementById('send');
+  var fmt=function(v){return 'R$ '+Math.round(v).toLocaleString('pt-BR')};
+  function render(){
+    var t=0,ls=[],parts=[];
+    items.forEach(function(it){var n=q[it[0]];document.getElementById('q-'+it[0]).textContent=n;if(n){t+=n*it[2];ls.push('<li><span>'+n+'× '+it[1]+'</span><span>'+fmt(n*it[2])+'</span></li>');parts.push(n+'x '+it[1])}});
+    if(imp.checked&&t){ls.push('<li><span>Impermeabilização</span><span>'+fmt(t*.4)+'</span></li>');t*=1.4}
+    if(window.gsap){var o={v:total._v||0};gsap.to(o,{v:t,duration:.6,ease:'power3.out',onUpdate:function(){total.textContent=fmt(o.v)}});total._v=t}else total.textContent=fmt(t);lines.innerHTML=ls.join('')||'<li><span>Escolha pelo menos um item</span></li>';
+    if(t){send.setAttribute('aria-disabled','false');send.href='https://wa.me/5548998399955?text='+encodeURIComponent('Olá! Quero orçamento: '+parts.join(', ')+(imp.checked?', com impermeabilização':'')+'. Estimativa do site: '+fmt(t)+'.')}
+    else{send.setAttribute('aria-disabled','true');send.removeAttribute('href')}
+  }
+  sim.addEventListener('click',function(e){var b=e.target.closest('button[data-k]');if(!b)return;q[b.dataset.k]=Math.max(0,Math.min(9,q[b.dataset.k]+Number(b.dataset.d)));render()});
+  imp.addEventListener('change',render);render();
+
+  // Acordeão das dúvidas
+  document.querySelectorAll('.acc .item').forEach(function(it){
+    var b=it.querySelector('button'),a=it.querySelector('.ans');
+    b.addEventListener('click',function(){
+      var open=!it.classList.contains('open');it.classList.toggle('open',open);b.setAttribute('aria-expanded',open);
+      if(window.gsap){gsap.fromTo(a,{height:open?0:a.offsetHeight},{height:open?a.scrollHeight:0,duration:.5,ease:'power3.inOut',onComplete:function(){if(open)a.style.height='auto'}})}
+      else a.style.height=open?'auto':'0';
+    });
+  });
+
+  // Redemoinho suave no fechamento
+  var cv=document.querySelector('.cta canvas');
+  if(cv&&cv.getContext){
+    var cx=cv.getContext('2d'),tt=0,dp=Math.min(devicePixelRatio||1,2),cw,ch,vis=false;
+    var sz=function(){cw=cv.clientWidth;ch=cv.clientHeight;cv.width=cw*dp;cv.height=ch*dp;cx.setTransform(dp,0,0,dp,0,0)};
+    sz();addEventListener('resize',sz);
+    if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting}).observe(cv);else vis=true;
+    (function draw(){
+      if(vis){cx.clearRect(0,0,cw,ch);var x0=cw*.86,y0=ch*.5;
+        for(var i=0;i<22;i++){var r=16+i*16,an=tt*.006*(1+i*.04)+i*.5;cx.beginPath();cx.ellipse(x0,y0,r*1.3,r*.62,an*.12,an,an+Math.PI*1.25);cx.strokeStyle='rgba(255,255,255,'+(.42-i*.016)+')';cx.lineWidth=1.4;cx.stroke()}
+        tt++}
+      requestAnimationFrame(draw)})();
+  }
+
+  // Vídeos tocam só na tela
+  document.querySelectorAll('video').forEach(function(v){
+    if(!('IntersectionObserver' in window))return;
+    new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(v.preload==='none')v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})}).observe(v);
+  });
+})();
+</script>
+<script>
+(function(){
+  // Camada de movimento. Sem GSAP (bloqueado ou offline), a página já está completa e estática.
+  if(!window.gsap||!window.ScrollTrigger)return;
+  gsap.registerPlugin(ScrollTrigger);
+  var mobile=matchMedia('(max-width:760px)').matches;
+  var E='power4.out';
+
+  // Quebra títulos em palavras para subirem de dentro de uma máscara
+  function split(el){
+    if(el.dataset.split)return el.querySelectorAll('.w > span');
+    el.dataset.split='1';el.classList.add('split');
+    var walk=function(node){
+      [].slice.call(node.childNodes).forEach(function(n){
+        if(n.nodeType===3){
+          var frag=document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(function(t){
+            if(!t)return;
+            if(/^\s+$/.test(t)){frag.appendChild(document.createTextNode(t));return}
+            var w=document.createElement('span');w.className='w';var s=document.createElement('span');s.textContent=t;w.appendChild(s);frag.appendChild(w);
+          });
+          n.parentNode.replaceChild(frag,n);
+        } else if(n.nodeType===1&&!n.classList.contains('w'))walk(n);
+      });
+    };
+    walk(el);return el.querySelectorAll('.w > span');
+  }
+
+  // Barra: progresso de leitura e esconde ao descer
+  var prog=document.createElement('div');prog.className='progress';document.body.appendChild(prog);
+  gsap.to(prog,{scaleX:1,ease:'none',scrollTrigger:{start:0,end:'max',scrub:.2}});
+  var bar=document.querySelector('.bar'),lastY=0;
+  addEventListener('scroll',function(){var y=scrollY;bar.classList.toggle('hide',y>lastY&&y>240);lastY=y},{passive:true});
+
+  // Herói: palavras sobem, foto abre, celular entra e flutua
+  var tl=gsap.timeline({defaults:{ease:E}});
+  tl.from(split(document.querySelector('.hero h1')),{yPercent:110,duration:1.1,stagger:.06})
+    .from('.hero-copy .lead',{y:24,opacity:0,duration:.9},'-=.75')
+    .from('.hero-copy .ctas .btn',{y:20,opacity:0,duration:.8,stagger:.08},'-=.65')
+    .from('.promises li',{x:-16,opacity:0,duration:.7,stagger:.07},'-=.6')
+    .fromTo('.hero-pic .photo',{clipPath:'inset(18% 12% 18% 12% round 26px)'},{clipPath:'inset(0% 0% 0% 0% round 26px)',duration:1.4,ease:'expo.out'},0.1)
+    .from('.hero-pic .photo img',{scale:1.25,duration:1.8,ease:'expo.out'},0.1)
+    .from('.hero-pic .phone',{y:120,rotate:-8,opacity:0,duration:1.3,ease:'expo.out'},0.5);
+  gsap.to('.hero-pic .phone',{y:-12,duration:2.6,ease:'sine.inOut',yoyo:true,repeat:-1,delay:1.8});
+  if(!mobile){
+    gsap.to('.hero-pic .photo img',{yPercent:8,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+    gsap.to('.hero-pic .phone',{yPercent:-18,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  }
+
+  // Faixa que corre, acelera com a rolagem
+  var track=document.querySelector('.marquee .track');
+  if(track){
+    var loop=gsap.to(track,{xPercent:-50,ease:'none',duration:28,repeat:-1});
+    ScrollTrigger.create({onUpdate:function(s){var v=Math.min(4,1+Math.abs(s.getVelocity())/800);gsap.to(loop,{timeScale:s.direction<0?-v:v,duration:.3,overwrite:true});gsap.to(loop,{timeScale:s.direction<0?-1:1,duration:1.2,delay:.3})}});
+  }
+
+  // Títulos de seção sobem palavra por palavra
+  gsap.utils.toArray('main h2').forEach(function(h){
+    if(h.closest('.hero'))return;
+    gsap.from(split(h),{yPercent:110,duration:1,stagger:.05,ease:E,scrollTrigger:{trigger:h,start:'top 88%'}});
+  });
+  // Textos e blocos chegam em ordem de leitura
+  gsap.utils.toArray('[data-in]').forEach(function(el){
+    if(el.tagName==='H2')return;
+    gsap.from(el,{y:36,opacity:0,duration:1,ease:E,scrollTrigger:{trigger:el,start:'top 90%'}});
+  });
+
+  // Fotos abrem de uma máscara e se movem devagar dentro dela
+  gsap.utils.toArray('.svc .pic, .plan .pic, .report .stage, .ba').forEach(function(box){
+    gsap.fromTo(box,{clipPath:'inset(14% 8% 14% 8% round 26px)'},{clipPath:'inset(0% 0% 0% 0% round 26px)',duration:1.4,ease:'expo.out',scrollTrigger:{trigger:box,start:'top 85%'}});
+    var img=box.querySelector(':scope > img');
+    if(img&&!mobile)gsap.fromTo(img,{yPercent:-6,scale:1.12},{yPercent:6,scale:1.12,ease:'none',scrollTrigger:{trigger:box,start:'top bottom',end:'bottom top',scrub:true}});
+  });
+
+  // Passos: a linha enche conforme a leitura
+  var rail=document.querySelector('.how .rail i');
+  if(rail)gsap.to(rail,{scaleY:1,ease:'none',scrollTrigger:{trigger:'.how ol',start:'top 70%',end:'bottom 60%',scrub:.3}});
+  gsap.utils.toArray('.how li').forEach(function(li){
+    gsap.from(li,{x:mobile?0:40,y:mobile?28:0,opacity:0,duration:1,ease:E,scrollTrigger:{trigger:li,start:'top 85%'}});
+  });
+
+  // Relatório: o celular sobe girando de leve
+  gsap.from('.report .stage .phone',{y:80,rotate:6,duration:1.4,ease:'expo.out',scrollTrigger:{trigger:'.report .stage',start:'top 75%'}});
+  gsap.from('.report dl > div',{y:24,opacity:0,stagger:.1,duration:.9,ease:E,scrollTrigger:{trigger:'.report dl',start:'top 85%'}});
+
+  // Linhas do simulador entram em cascata
+  gsap.from('.sim-row',{y:20,opacity:0,stagger:.05,duration:.7,ease:E,scrollTrigger:{trigger:'.sim',start:'top 85%'}});
+  gsap.from('.total',{y:40,opacity:0,duration:1,ease:E,scrollTrigger:{trigger:'.total',start:'top 88%'}});
+
+  // Preço do plano conta até o valor
+  var pp=document.querySelector('.plan .price');
+  if(pp){var small=pp.querySelector('small').outerHTML,o={v:0};ScrollTrigger.create({trigger:pp,start:'top 88%',once:true,onEnter:function(){gsap.to(o,{v:59,duration:1.4,ease:'power3.out',onUpdate:function(){pp.innerHTML='R$ '+Math.round(o.v)+small}})}})}
+
+  // Fechamento: a caixa cresce ao entrar
+  gsap.from('.cta .box',{scale:.92,borderRadius:80,duration:1.3,ease:'expo.out',scrollTrigger:{trigger:'.cta',start:'top 85%'}});
+  gsap.from('.acc .item',{y:24,opacity:0,stagger:.06,duration:.8,ease:E,scrollTrigger:{trigger:'.acc',start:'top 85%'}});
+
+  // Interações sob a mão (só com mouse)
+  if(matchMedia('(hover:hover) and (pointer:fine)').matches){
+    document.querySelectorAll('.svc').forEach(function(card){
+      var pic=card.querySelector('.pic');
+      card.addEventListener('pointermove',function(e){var r=pic.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;gsap.to(pic,{rotateY:x*8,rotateX:-y*8,transformPerspective:900,duration:.5,ease:'power2.out'})});
+      card.addEventListener('pointerleave',function(){gsap.to(pic,{rotateY:0,rotateX:0,duration:.8,ease:'elastic.out(1,.6)'})});
+    });
+    document.querySelectorAll('.btn-blue,.btn-white').forEach(function(b){
+      b.classList.add('magnet');
+      b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.18,y:(e.clientY-r.top-r.height/2)*.28,duration:.4,ease:'power2.out'})});
+      b.addEventListener('pointerleave',function(){gsap.to(b,{x:0,y:0,duration:.7,ease:'elastic.out(1,.5)'})});
+    });
+    // O antes e depois segue o mouse
+    var ba=document.querySelector('.ba'),range=document.getElementById('ba-range');
+    ba.addEventListener('pointermove',function(e){if(e.buttons)return;var r=ba.getBoundingClientRect(),v=Math.max(0,Math.min(100,(e.clientX-r.left)/r.width*100));gsap.to(ba,{'--pos':v+'%',duration:.5,ease:'power3.out'});range.value=v});
+  }
+})();
+</script>
+</body>
+</html>
